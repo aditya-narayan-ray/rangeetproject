@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighbourhood map</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+	<style type="text/css">
+		html{width: 100%; height: 100%}
+		body{width: 100%; height: 100%}
+		div{width: 100%; height: 100%}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-10 map">
+				
+			</div>
+			<div class="col-lg-2">
+				<button class="eamall" onclick="changemarker('eamall')">EA MALL</p>
+				<button class="forummall" onclick="changemarker('forummall')">FORUM MALL</p>
+				<button class="loc1" onclick="changemarker('phoenixmall')">PHOENIX MALL</p>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	function changemarker(str) {
+		console.log(typeof str);
+		if (str=="eamall") {
+			$('.map').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6375963730534!2d80.26176681464614!3d13.058724690798751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d9a9c244571%3A0x8795a1a0b7a4534b!2sExpress%20Avenue%20-Mall!5e0!3m2!1sen!2sin!4v1573071248381!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
+		} else if (str=='forummall') {
+			$('.map').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7764980983798!2d80.20731311464611!3d13.049893690804518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c2084f9c3b%3A0x54b9629cc45d76f0!2sForum%20Vijaya%20Mall!5e0!3m2!1sen!2sin!4v1573070456026!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
+		} else if (str=='phoenixmall') {
+			$('.map').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.69573167155!2d80.21443121464539!3d12.991302590842986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267623628a3ff%3A0xdedb2723dbb2d85c!2sPhoenix%20Market%20City%2C%20142%2C%20Velachery%20Main%20Rd%2C%20Indira%20Gandhi%20Nagar%2C%20Velachery%2C%20Chennai%2C%20Tamil%20Nadu%20600042!5e0!3m2!1sen!2sin!4v1573071090757!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
+		}
+	}
+</script>
+</html>
