@@ -17,21 +17,37 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 	<style type="text/css">
-		html{width: 100%; height: 100%}
-		body{width: 100%; height: 100%}
-		div{width: 100%; height: 100%}
+		html{width: 100%; height: 100%;}
+		body{width: 100%; height: 100%;}
+		.row,.map,.container-fluid{width: 100%; height: 100%;}
+		.map{border-style: inset;}
+		.selection{border-style: inset;
+			background: rgb(254,225,225);
+			background: linear-gradient(90deg, rgba(254,225,225,1) 0%, rgba(254,127,127,0.4265056364342612) 50%, rgba(181,250,255,1) 100%);
+		}
+		.buttons{width: 100%; padding-top: 10%}
 	</style>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-10 map">
-				
+
 			</div>
-			<div class="col-lg-2">
-				<button class="eamall" onclick="changemarker('eamall')">EA MALL</p>
-				<button class="forummall" onclick="changemarker('forummall')">FORUM MALL</p>
-				<button class="loc1" onclick="changemarker('phoenixmall')">PHOENIX MALL</p>
+			<div class="col-lg-2 selection">
+				<div class="btn-group-vertical buttons">
+					<button type="button" class="eamall btn btn-outline-primary" onclick="changemarker('eamall')"><strong>EA MALL</strong></button>
+					<button type="button" class="forummall btn btn-outline-primary" onclick="changemarker('forummall')"><strong>FORUM MALL</strong></button>
+					<button type="button" class="phoenixmall btn btn-outline-primary" onclick="changemarker('phoenixmall')"><strong>PHOENIX MALL</strong></button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+					<button type="button" class="btn btn-outline-primary">Primary</button>
+				</div>
+
 			</div>
 		</div>
 
@@ -49,5 +65,6 @@
 			$('.map').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.69573167155!2d80.21443121464539!3d12.991302590842986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267623628a3ff%3A0xdedb2723dbb2d85c!2sPhoenix%20Market%20City%2C%20142%2C%20Velachery%20Main%20Rd%2C%20Indira%20Gandhi%20Nagar%2C%20Velachery%2C%20Chennai%2C%20Tamil%20Nadu%20600042!5e0!3m2!1sen!2sin!4v1573071090757!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
 		}
 	}
+	changemarker('eamall');
 </script>
 </html>
